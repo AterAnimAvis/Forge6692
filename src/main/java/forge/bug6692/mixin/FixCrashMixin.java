@@ -16,7 +16,7 @@ public class FixCrashMixin {
 
     @Redirect(method = "updateFramebufferSize", at = @At(value = "INVOKE", target = "Lorg/lwjgl/glfw/GLFW;glfwGetFramebufferSize(J[I[I)V"))
     public void fix(long handle, int[] width, int[] height) {
-        if (!Boolean.parseBoolean(System.getProperty("forge.bug6692.fix", "false"))) {
+        if (!Boolean.parseBoolean(System.getProperty("forge.bug6692.fix", "true"))) {
             GLFW.glfwGetFramebufferSize(handle, width, height);
             return;
         }
