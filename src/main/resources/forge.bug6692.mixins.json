@@ -7,7 +7,6 @@
   ],
   "client": [
     "AutoMinimizeMixin",
-    "ForceTriggerMixin",
     "FixCrashMixin"
   ],
   "injectors": {

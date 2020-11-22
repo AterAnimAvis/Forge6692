@@ -16,7 +16,10 @@ public class AutoMinimizeMixin {
 
     @Inject(method = "updateFramebufferSize", at = @At("HEAD"))
     public void autoMinimize(CallbackInfo ci) {
-        if (!Boolean.parseBoolean(System.getProperty("forge.bug6692.minimize", "false"))) return;
+        if (!Boolean.parseBoolean(System.getProperty("forge.bug6692.minimize", "true"))) return;
+
+        boolean isIconified = GLFW.glfwGetWindowAttrib(handle, GLFW.GLFW_ICONIFIED) == GLFW.GLFW_TRUE;
+        if (isIconified) return;
 
         GLFW.glfwIconifyWindow(handle);
         GLFW.glfwPollEvents();

@@ -51,23 +51,9 @@ minecraft {
 
         naturalCrash {
             parent runs.client
-
-            property 'forge.bug6692.minimize', 'true'
-            property 'forge.bug6692.force',    'false'
-        }
-
-        forceCrash {
-            parent runs.client
         }
 
         naturalFix {
-            parent runs.client
-
-            property 'forge.bug6692.force',    'false'
-            property 'forge.bug6692.fix',      'true'
-        }
-
-        forceFix {
             parent runs.client
 
             property 'forge.bug6692.fix',      'true'
