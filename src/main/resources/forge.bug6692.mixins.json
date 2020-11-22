@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "package": "forge.bug6692.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "forge.bug6692.refmap.json",
+  "mixins": [
+  ],
+  "client": [
+    "AutoMinimizeMixin",
+    "ForceTriggerMixin",
+    "FixCrashMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "minVersion": "0.8"
+}
